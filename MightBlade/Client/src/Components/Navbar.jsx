@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LoginButton from '../Services/LoginButton.js';
 import styles from './modules/navbar.module.css';
 import axios from 'axios';
 
@@ -9,6 +10,7 @@ const Navbar = () => {
             <div className="container-fluid">
                 <a class="navbar-brand" href="#">MightBlade</a>
             </div>
+            <LoginButton />
         </nav>
     )
 }
