@@ -1,3 +1,4 @@
+using MightBlade.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace MightBlade
 {
@@ -20,6 +22,7 @@ namespace MightBlade
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -28,8 +31,26 @@ namespace MightBlade
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CCCCorsPolicy", builder =>
+                {
+                    builder
+                        .WithOrigins(new string[]{
+                            "http://localhost:3000",
+                            "https://localhost:3001",
+                            "http://localhost:5000",
+                            "https://localhost:5001"
+                        })
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials();
+                });
+            });
+
+
             string mySqlConnectionStr = Configuration.GetConnectionString("gearhost");
-            services.AddDbContextPool<MyDBContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+            services.AddDbContextPool<MightBladeContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
             services.AddControllersWithViews();
         }
 

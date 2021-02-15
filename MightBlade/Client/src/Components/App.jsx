@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from './modules/app.module.css';
 import axios from 'axios';
 import Navbar from './Navbar.jsx';
+import Profile from '../Auth/Profile.js';
 
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
     return (
         <div className={styles.appContainer}>
             <Navbar />
-            Hello
+            <Profile />
         </div>
     )
 }

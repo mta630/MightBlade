@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './Components/App.jsx';
 import { Route, Link, Router, Switch, BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from "@auth0/auth0-react";
+import * as serviceWorker from "./Services/registerServiceWorker.js";
 
 const rootElement = document.getElementById('root');
 
@@ -20,3 +21,5 @@ const routing = (
 )
 
 ReactDOM.render(routing, rootElement);
+
+serviceWorker.unregister();

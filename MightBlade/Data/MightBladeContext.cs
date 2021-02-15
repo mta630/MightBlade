@@ -1,16 +1,18 @@
-﻿using MightBlade.Models;
+﻿using MightBlade.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MightBlade.DBContexts
+namespace MightBlade.Data
 {
-    public class MyDBContext : DbContext
+    public class MightBladeContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Monster> Monsters { get; set; }
+        public DbSet<MapTile> MapTile { get; set; }
 
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options)
         {
