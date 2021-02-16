@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FPScgAZQFmjHRq/eOn6jdt4W0MYOcXKovDna1IUWfizBbUACj6F1pUC+tBMFQAYTTqnkJ48XIm5ussfgUG0efA==",
+  "dgSpecHash": "BGSVKTGAgCXc93HHuqiX1ep/8EnfuFdqufM6vHY9zOaN2zAp8KX1xIWmjHfejDIGMV06xsy6f1jslxvtzbOBhg==",
   "success": true,
   "projectFilePath": "C:\\Users\\michael.albert\\source\\repos\\MightBlade\\MightBlade\\MightBlade.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\michael.albert\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\michael.albert\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\michael.albert\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.12\\microsoft.aspnetcore.nodeservices.3.1.12.nupkg.sha512",
     "C:\\Users\\michael.albert\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.12\\microsoft.aspnetcore.spaservices.3.1.12.nupkg.sha512",
@@ -38,7 +39,8 @@
     "C:\\Users\\michael.albert\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\5.0.0-alpha.2\\pomelo.entityframeworkcore.mysql.5.0.0-alpha.2.nupkg.sha512",
     "C:\\Users\\michael.albert\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\michael.albert\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\michael.albert\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\michael.albert\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\michael.albert\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

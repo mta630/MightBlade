@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace MightBlade.Models
 {
-    public class MapTile
+    public class MapTileModel
     {
         public string name {get; set;}
-        public Dictionary<string, MapTile> Exits {get; set;}
+        public Dictionary<string, MapTileModel> Exits {get; set;}
         public string description { get; set; }
         public string color { get; set; }
 

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MightBlade.Models
 {
-    public class User
+    public class UserModel
     {
         public int Id { get; set; }
         public string Email {get; set;}
@@ -15,7 +15,7 @@ namespace MightBlade.Models
         public int Gold { get; set; }
         public string Stats { get; set; }
         public string Inventory { get; set; }
-        public MapTile CurrentLocation {get; set;}
+        public MapTileModel CurrentLocation {get; set;}
 
     }
 }

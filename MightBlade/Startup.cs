@@ -1,3 +1,4 @@
+using AutoMapper;
 using MightBlade.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,12 +9,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MightBlade.DBContexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using MightBlade.Services;
+using MightBlade.Data.Entities;
 
 namespace MightBlade
 {
@@ -33,7 +35,7 @@ namespace MightBlade
 
             services.AddCors(options =>
             {
-                options.AddPolicy("CCCCorsPolicy", builder =>
+                options.AddPolicy("MBCorsPolicy", builder =>
                 {
                     builder
                         .WithOrigins(new string[]{
@@ -50,7 +52,12 @@ namespace MightBlade
 
 
             string mySqlConnectionStr = Configuration.GetConnectionString("gearhost");
-            services.AddDbContextPool<MightBladeContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+            services.AddDbContextPool<MBContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+
+            services.AddTransient<UserService>();
+
+            services.AddScoped<UserRepository>();
+
             services.AddControllersWithViews();
         }
 
@@ -66,6 +73,7 @@ namespace MightBlade
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors("MBCorsPolicy");
 
             app.UseAuthorization();
 

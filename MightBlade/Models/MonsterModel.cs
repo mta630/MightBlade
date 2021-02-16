@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MightBlade.Models
 {
-    public class Monsters
+    public class MonsterModel
     {
         public string Name { get; set;}
         public int ExperienceGain { get; set;}

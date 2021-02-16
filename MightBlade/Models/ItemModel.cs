@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MightBlade.Models
 {
-    public class Item
+    public class ItemModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
